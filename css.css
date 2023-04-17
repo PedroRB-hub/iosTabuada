@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+:root,:root.light {
+  --body-background: radial-gradient(circle, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 100%);
+  --body-textColor: #101010;
+  --box-color: #2a2a2a;
+  --button-color:linear-gradient(353deg, rgba(0,0,0,1) 0%, rgba(83,83,83,1) 100%);
+}
+
+
+  :root.dark {
+    --body-background: radial-gradient(circle, rgba(8, 8, 8, 1) 0%, rgba(33, 33, 33, 1) 100%);
+    --body-textColor: #ffffff;
+    --box-color: #fefefe;
+    --button-color:linear-gradient(353deg, rgba(185,185,185,1) 0%, rgba(242,242,242,1) 100%);
+  }
+
+
+body {
+  background: var(--body-background);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Arial Narrow Bold', sans-serif;
+  color: var(--body-textColor);
+}
+
+header {
+  margin: 20px;
+  padding: 10px;
+  position: relative;
+}
+header button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 8px;
+  background: var(--button-color);
+  color: var(--button-color);
+}
+.container input,
+.container button {
+  /* max-width: 100px; */
+  /* height: 50px; */
+  padding: 20px;
+  box-shadow: 1px 1px 3px var(--box-color);
+  background: var(--b);
+  justify-content: center;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  margin: 10px;
+}
+
+.tabela {
+  display: contents;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  color: var(--body-textColor);
+  font-size: 1.5rem;
+}
+footer {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+ a {
+ text-decoration: none;
+}
+a:visited {
+  color: var(--body-textColor);
+}

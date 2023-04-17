@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="css.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabuada</title>
+  <script>
+    function gerarTabuada() {
+      var numero = parseInt(document.getElementById("numero").value)
+      var tabela = document.getElementById("tabela-tabuada");
+      tabela.innerHTML = "";
+      // i++
+      for (var i = 1; i <= 10; i = i + 1) {
+        var resultado = numero * i
+        var linha = "<tr><td>" + numero + " X " + i + "</td><td>" + " = " + resultado + "</td></tr>"
+        tabela.innerHTML += linha
+
+      }
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <h1> Tabuada </h1>
+    <h3>Digite um valor para gerar sua tabuada</h3>
+    <button onClick="toggleDarkMode()">Trocar de cor</button>
+  </header>
+  <div class="container">
+
+    <input type="text" id="numero">
+    <button onclick="gerarTabuada()">Gerar Tabuada</button>
+    <table class="tabela" id="tabela-tabuada"></table>
+  </div>
+  <footer> <a target="_blank" href="https://github.com/pedrorb-hub">@PedroRB</a></footer>
+</body>
+<script src="main.js"></script>
+
+</html>
