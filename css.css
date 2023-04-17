@@ -4,28 +4,35 @@
 }
 
 :root,:root.light {
-  --body-background: radial-gradient(circle, rgba(210,210,210,1) 0%, rgba(255,255,255,1) 100%);
+  --body-background: radial-gradient(circle, rgba(63,146,251,1) 0%, rgba(70,252,247,1) 100%);
   --body-textColor: #101010;
   --box-color: #2a2a2a;
-  --button-color:linear-gradient(353deg, rgba(0,0,0,1) 0%, rgba(83,83,83,1) 100%);
+  --button-background: linear-gradient(321deg, rgba(213,232,251,1) 0%, rgba(228,247,247,1) 100%);
+  --button-BGcolor:linear-gradient(353deg, rgba(0,0,0,1) 0%, rgba(83,83,83,1) 100%);
+  --button-BGcolorClick:linear-gradient(353deg, rgba(83,83,83,1)0%, rgba(0,0,0,1)100%);
+  --button-textColor: #fefefe
 }
 
 
   :root.dark {
     --body-background: radial-gradient(circle, rgba(8, 8, 8, 1) 0%, rgba(33, 33, 33, 1) 100%);
     --body-textColor: #ffffff;
-    --box-color: #fefefe;
+    --box-color: #b1b1b1;
+    --button-background: linear-gradient(321deg, rgba(50,53,55,1) 0%, rgba(28,31,31,1) 100%);
     --button-color:linear-gradient(353deg, rgba(185,185,185,1) 0%, rgba(242,242,242,1) 100%);
   }
 
 
 body {
   background: var(--body-background);
+  background-repeat: no-repeat;
+  height: 100vh;
   text-align: center;
   display: flex;
   flex-direction: column;
   font-family: 'Arial Narrow Bold', sans-serif;
   color: var(--body-textColor);
+
 }
 
 header {
@@ -40,21 +47,24 @@ header button {
   padding: 5px;
   border: none;
   border-radius: 8px;
-  background: var(--button-color);
-  color: var(--button-color);
+  background: var(--button-BGcolor);
+  color: var(--button-textColor);
+  cursor: pointer;
+}
+header button:clicked {
+background-color: var(--button-BGcolorClick);
 }
 .container input,
 .container button {
-  /* max-width: 100px; */
-  /* height: 50px; */
   padding: 20px;
   box-shadow: 1px 1px 3px var(--box-color);
-  background: var(--b);
+  background: var(--button-background);
   justify-content: center;
   border: none;
   font-size: 1rem;
   border-radius: 8px;
   margin: 10px;
+  color: var(--body-textColor)
 }
 
 .tabela {
@@ -73,6 +83,7 @@ footer {
 }
  a {
  text-decoration: none;
+ color: var(--body-textColor);
 }
 a:visited {
   color: var(--body-textColor);
